@@ -1,0 +1,65 @@
+/* Typeface */
+* {
+    font-family: Roboto;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.tagline {
+    font-weight: 700;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    color: grey;
+}
+
+/* Flex */
+.flex-container {
+    display: flex;
+}
+
+.flex-container div {
+    flex: 1;
+}
+
+.flex-container .navigation,
+.flex-container .gallery {
+    padding: 40px;
+}
+
+.flex-container .gallery {
+    flex: 3 1 0%;
+    display: flex;
+}
+
+.left-gallery img,
+.right-gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.left-gallery,
+.right-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gallery {
+    gap: 15px;
+}
+
+.navigation {
+    position: sticky;
+}
