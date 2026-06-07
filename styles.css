@@ -11,7 +11,10 @@ body {
     font-family: Roboto;
     font-size: 14px;
     font-weight: 350;
-    color: #2f2f2f;
+}
+
+p {
+    color:#2f2f2f
 }
 
 h1 {
@@ -20,8 +23,26 @@ h1 {
     margin-top: 0px;
 }
 
-.tagline {
+.bold {
     font-weight: 600;
+}
+
+.italic {
+    font-style: oblique;
+}
+
+.grey {
+    color: grey;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+a:active {
+    color:grey;
 }
 
 /* Flex */
@@ -35,11 +56,13 @@ h1 {
 }
 
 .flex-container .navigation,
-.flex-container .gallery {
+.flex-container .gallery,
+.flex-container .content {
     padding: 40px;
 }
 
-.flex-container .gallery {
+.flex-container .gallery,
+.flex-container .content {
     flex: 3 1 0%;
     display: flex;
 }
@@ -69,21 +92,27 @@ h1 {
     overflow-y: auto;
 }
 
+.content {
+    overflow-y: auto;
+}
+
 /* Hide Scrollbar */
 .gallery,
-.navigation {
+.navigation,
+.content {
 
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
 .gallery::-webkit-scrollbar,
-.navigation::-webkit-scrollbar {
+.navigation::-webkit-scrollbar,
+.content {
     display: none;
 }
 
 /* Table */
-table  {
+.project-table {
     margin-top: 30px;
     width: 100%;
     color: #2f2f2f;
@@ -92,39 +121,45 @@ table  {
     border-spacing: 10px;
 }
 
-th {
+.project-table th {
     font-weight: 600;
     text-align: left;
 }
 
-td,
-th {
+.project-table td,
+.project-table th {
     vertical-align: middle;
     padding: 0px 0px 10px 0px;
 }
 
-td,
-th {
+.project-table td,
+.project-table th {
     border-bottom: 1px solid #2f2f2f;
 }
 
-tr:last-child td{
+.project-table tr:last-child td{
     border-bottom: none;
 }
 
-th:nth-child(1),
-td:nth-child(1),
-th:nth-child(3),
-td:nth-child(3) {
+.project-table th:nth-child(1),
+.project-table td:nth-child(1),
+.project-table th:nth-child(3),
+.project-table td:nth-child(3) {
     width: 60px;
 }
 
-/* Links */
-a {
-    text-decoration: none;
+.cv-table {
     color: #2f2f2f;
 }
 
-a:active {
-    color:grey;
+.cv-table td {
+    vertical-align: top;
+}
+
+.cv-table tr {
+    text-align: left;
+}
+
+.cv-table td:nth-child(1) {
+    width: 120px;
 }
