@@ -9,7 +9,7 @@ body {
 /* Typeface */
 * {
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 350;
 }
 
@@ -27,12 +27,23 @@ h1 {
     font-weight: 600;
 }
 
+.content-section-title {
+    font-weight: 600;
+    padding-top: 10px;
+}
+
 .italic {
     font-style: oblique;
 }
 
 .grey {
     color: grey;
+}
+
+.caption {
+    color: grey;
+    font-style: oblique;
+    font-size: 13px;
 }
 
 /* Links */
@@ -75,6 +86,12 @@ a:active {
     margin-bottom: 15px;
 }
 
+.main-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .left-gallery,
 .right-gallery {
     display: flex;
@@ -113,12 +130,12 @@ a:active {
 
 /* Table */
 .project-table {
-    margin-top: 30px;
+    margin-top: 8px;
     width: 100%;
     color: #2f2f2f;
-    margin-left: -10px;
-    margin-right: -10px;
-    border-spacing: 10px;
+    margin-left: -8px;
+    margin-right: -8px;
+    border-spacing: 8px;
 }
 
 .project-table th {
@@ -129,7 +146,7 @@ a:active {
 .project-table td,
 .project-table th {
     vertical-align: middle;
-    padding: 0px 0px 10px 0px;
+    padding: 0px 0px 8px 0px;
 }
 
 .project-table td,
@@ -162,4 +179,46 @@ a:active {
 
 .cv-table td:nth-child(1) {
     width: 120px;
+}
+
+.header-table {
+    color: #2f2f2f;
+    width: 100%;
+}
+
+.header-table td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.header-table td:nth-child(1) {
+    text-align: left;
+}
+
+.header-table td:nth-child(3) {
+    text-align: right;
+}
+
+/* Ordered List */
+
+ol {
+    color:#2f2f2f;
+}
+
+ol li::marker {
+    font-weight: 600;
+}
+
+li {
+    padding-left: 15px;
+}
+
+/* Side-By-Side Images */
+.image-column {
+    flex: 50%;
+}
+
+.image-row {
+    display: flex;
+    gap: 10px;
 }
