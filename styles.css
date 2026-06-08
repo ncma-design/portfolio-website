@@ -1,9 +1,15 @@
+/* Header */
+.mobile-header,
+.mobile-footer {
+    display: none;
+}
+
 /* Body */
 html,
 body {
     margin: 0;
     height: 100%;
-    overflow: hidden;
+    overflow-y:auto;
 }
 
 /* Typeface */
@@ -21,6 +27,11 @@ h1 {
     font-size: 24px;
     font-weight: 700;
     margin-top: 0px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0px;
 }
 
 .bold {
@@ -72,6 +83,12 @@ a:active {
     padding: 40px;
 }
 
+.flex-container .mobile-navigation {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
 .flex-container .gallery,
 .flex-container .content {
     flex: 3 1 0%;
@@ -99,24 +116,29 @@ a:active {
     gap: 15px;
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Independent Scrolling */
 .gallery {
     gap: 15px;
     overflow-y: auto;
 }
 
-.navigation {
-    overflow-y: auto;
-}
-
-.content {
+.navigation,
+.content,
+.mobile-navigation {
     overflow-y: auto;
 }
 
 /* Hide Scrollbar */
 .gallery,
 .navigation,
-.content {
+.content,
+.mobile-navigation,
+body {
 
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -124,7 +146,9 @@ a:active {
 
 .gallery::-webkit-scrollbar,
 .navigation::-webkit-scrollbar,
-.content {
+.content::-webkit-scrollbar,
+.mobile-navigation::-webkit-scrollbar,
+body::-webkit-scrollbar {
     display: none;
 }
 
@@ -199,6 +223,23 @@ a:active {
     text-align: right;
 }
 
+.mobile-header-table {
+    width: 100%;
+}
+
+.mobile-header-table td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.mobile-header-table td:nth-child(1) {
+    text-align: left;
+}
+
+.mobile-header-table td:nth-child(2) {
+    text-align: right;
+}
+
 /* Ordered List */
 
 ol {
@@ -221,4 +262,47 @@ li {
 .image-row {
     display: flex;
     gap: 10px;
+}
+
+/* Media Query - Phones*/
+@media only screen and (max-width: 600px) {
+    * {
+        font-size: 20px;
+    }
+    
+    .caption {
+        font-size: 16px;
+    }
+
+    .navigation,
+    .empty {
+        display: none;
+    }
+
+    .mobile-header,
+    .mobile-footer {
+    display: flex;
+    padding: 15px;
+
+    position: sticky;
+    top: 0;
+
+    background: white;
+
+    }
+
+    header {
+        position: sticky;
+    }
+
+    .gallery,
+    .content {
+        width: 100%;
+    }
+
+    .flex-container .gallery,
+    .flex-container .content {
+    padding-top: 0px;
+    }
+
 }
