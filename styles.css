@@ -461,4 +461,13 @@ li {
         display: none;
     }
 
+    a {
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity 0.15s ease;
+    }
+
+    a:active {
+    opacity: 0.5;
+    }
+
 }
