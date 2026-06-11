@@ -461,12 +461,16 @@ li {
         display: none;
     }
 
-    a {
+    a,
+    button,
+    #menu-button,
+    #close-button {
     -webkit-tap-highlight-color: transparent;
     transition: opacity 0.15s ease;
     }
 
-    a:active {
+    a:active,
+    button:active {
     opacity: 0.5;
     }
 
