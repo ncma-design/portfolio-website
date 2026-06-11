@@ -2,10 +2,6 @@ fetch("/components/navigation.html")
     .then(res => res.text())
     .then(data => {
         document.getElementById("navigation-placeholder").innerHTML = data;
-
-        // re-run nav JS AFTER injection
-        initNavigation();
-
     });
 
 fetch("/components/mobile-navigation.html")
