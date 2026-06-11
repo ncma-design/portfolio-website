@@ -404,7 +404,8 @@ li {
     transform: translateY(0) scale(1);
 }
 
-.img-wrap img {
+.left-gallery .img-wrap img,
+.right-gallery .img-wrap img {
     filter: grayscale(100%) contrast(1.05) brightness(1.05);
     transition: filter 0.5s ease;
     display: block;
@@ -419,16 +420,15 @@ li {
     transform: translateY(0) scale(1.01);
 }
 
-
 /* Media Query - Phones*/
 @media only screen and (max-width: 600px) {
-    /* * {
-        font-size: 20px;
+    * {
+        font-size: 16px;
     }
     
     .caption {
-        font-size: 16px;
-    } */
+        font-size: 14px;
+    }
 
     .navigation,
     .empty {
@@ -472,6 +472,12 @@ li {
     a:active,
     button:active {
     opacity: 0.5;
+    }
+
+    .flex-container {
+        display: block;
+        height: auto;
+        min-height: 100vh;
     }
 
 }
